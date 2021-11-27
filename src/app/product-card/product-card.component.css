@@ -1,0 +1,44 @@
+
+.product-card {
+    outline: 1px solid black;
+    padding: 15px;
+    gap: 10px;
+    max-width: 200px;
+    min-height: 400px;
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: lightslategray;
+}
+
+.product-card-button {
+    height: 30px;
+    margin: auto;
+    border: none;
+    background-color: darkblue;
+    color: white;
+}
+
+.product-card-button:active {
+    background-color: rgb(128, 121, 170);
+}
+
+.product-card-name {
+    font-family: Calibri, serif;
+    color: darkblue;
+    text-align: center;
+}
+
+.product-card-price {
+    font-family: Calibri, serif;
+    color: darkblue;
+    text-align: center;
+}
+
+.product-card-image {
+    width: 200px;
+    height: 200px;
+    border: 1px solid gray;
+}

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,13 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'nc-angular1';
+  title: string = 'nc-angular1';
+  cartOpened: boolean = false;
 
-  opencart() {
-    this.title = "Компьютерные комплектующие";
+  openCart(): void {
+    this.cartOpened = true;
+  }
 
-    const a = 5;
-    const b = 15;
-    alert(`a = ${a}\nb = ${b}\na + b = ${a + b}`);
+  closeCart(): void {
+    this.cartOpened = false;
   }
 }

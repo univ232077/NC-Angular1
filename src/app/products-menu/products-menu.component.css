@@ -1,0 +1,15 @@
+.products-menu {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.products-header {
+    text-align: center;
+}
+
+.empty-menu-notification {
+    text-align: center;
+}
