@@ -4,9 +4,17 @@
             <h2>Корзина</h2>
             <button class="basket-close-button" (click)="closeCart.emit()">X</button>
         </div>
-        <app-cart-products>
 
-        </app-cart-products>
+        <div *ngIf="cartProducts.length else emptyCart">
+            <div class="basket-list">
+                <app-cart-product *ngFor="let product of cartProducts" [product]="product"></app-cart-product>
+            </div>
+        </div>
+
+        <ng-template #emptyCart>
+            <p class="basket-list-empty">У вас нет ни одного товара в корзине!</p>
+        </ng-template>
+
         <div class="basket-footer">
             <button class="basket-button">Перейти к оплате</button>
         </div>

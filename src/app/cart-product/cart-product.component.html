@@ -1,5 +1,5 @@
 <div class="basket-item">
-    <span class="basket-item-name">ID: {{product!.id}}</span>
-    <span class="basket-item-count">{{product!.amount}}</span>
-    <span class="basket-item-price">{{product!.amount * 1000}}</span>
+    <span class="basket-item-name">ID: {{product?.id}}</span>
+    <span class="basket-item-count">{{product?.amount}}</span>
+    <span class="basket-item-price">{{(product?.amount ?? 0) * 1000}}</span>
 </div>
