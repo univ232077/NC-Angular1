@@ -1,0 +1,21 @@
+<div class="popup-background">
+    <div class="cart-container">
+        <div class="cart-header">
+            <h2>Корзина</h2>
+            <button class="cart-close-button" (click)="closeCart.emit()">X</button>
+        </div>
+        <div *ngIf="cartProducts.length else emptyCart">
+            <div class="cart-list">
+                <app-cart-product *ngFor="let productCard of cartProducts" [product]="productCard"></app-cart-product>
+            </div>
+            <div class="cart-footer-buttons">
+                <button class="cart-purchase-button">
+                    Перейти к оплате
+                </button>
+            </div>
+        </div>
+        <ng-template #emptyCart>
+            <p class="cart-list-empty">У вас нет ни одного товара в корзине!</p>
+        </ng-template>
+    </div>
+</div>

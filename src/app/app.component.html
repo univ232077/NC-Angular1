@@ -6,11 +6,14 @@
 </header>
 
 <div class="navigation-menu">
-  <h2>Меню навигации</h2>
-  <button id="basket-open-button" type="button" (click)="openCart()">Открыть корзину</button>
+  <a routerLink="/catalog">Каталог товаров</a>
+  <button id="basket-open-button" type="button" (click)="openCart()" class="cart-open-button">
+    Корзина
+    <img src="assets/cart-icon.png" class="cart-icon" alt="img">
+  </button>
 </div>
 
-<app-products-catalog></app-products-catalog>
+<router-outlet></router-outlet>
 
 <footer class="footer">
   <a href="">О нас</a>

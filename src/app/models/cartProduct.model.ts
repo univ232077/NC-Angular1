@@ -1,5 +1,6 @@
 export interface CartProductModel {
     id: number,
     amount: number,
-    image?: string
+    name?: string,
+    price?: number,
 }

@@ -1,0 +1,16 @@
+
+<h2 class="catalog-title">Каталог товаров</h2>
+<div class="products-header">
+    <input type="text"
+           placeholder="Поиск товара"
+           class="search-input"
+           [(ngModel)]="search" (keyup.enter)="onSearch()">
+</div>
+
+<div class="products-menu" *ngIf="productCards?.length else emptyProductMenu">
+    <app-product-card *ngFor="let item of productCards" [productCard]="item"></app-product-card>
+</div>
+
+<ng-template #emptyProductMenu>
+    <p class="empty-menu-notification">Увы, но пока у нас нет продуктов на продажу!</p>
+</ng-template>

@@ -1,0 +1,13 @@
+<div class="product-card">
+    <img class="product-card-image" src="{{productCard?.imageURL}}" alt="img">
+    <h3 class="product-card-name">
+        <a routerLink="/product/{{productCard?.id}}">
+            {{productCard?.name}}
+        </a>
+    </h3>
+    <p class="product-card-price">{{productCard?.price}} RUB</p>
+    <button class="product-card-button"
+            (click)="this.cartService.addProduct(this.productCard)">
+        Добавить в корзину
+    </button>
+</div>

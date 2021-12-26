@@ -7,7 +7,7 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
   title: string = 'nc-angular1';
-  cartOpened: boolean = false;
+  public cartOpened: boolean = false;
 
   openCart(): void {
     this.cartOpened = true;

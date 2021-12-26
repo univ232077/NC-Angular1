@@ -1,0 +1,47 @@
+.cart-item {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding: 10px;
+    border-top: 1px solid grey;
+    color: black;
+}
+
+.cart-item:hover {
+    background-color: gainsboro;
+}
+
+.cart-item-name {
+    width: 50%;
+}
+
+.cart-item-count-box {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+}
+
+.cart-item-count {
+    min-width: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.cart-item-count-button {
+    width: 30px;
+    height: 30px;
+}
+
+.cart-item-price {
+    min-width: 80px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.cart-item-buttons {
+    min-width: 30px;
+}
