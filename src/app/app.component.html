@@ -1,5 +1,5 @@
 
-<app-cart *ngIf="cartOpened" (closeCart)="closeCart()"></app-cart>
+<app-cart *ngIf="cartOpened" (closeCart)="this.manageCartState(false)"></app-cart>
 
 <header class="header">
   <h1>Магазин компьютерных комплектующих</h1>
@@ -7,7 +7,7 @@
 
 <div class="navigation-menu">
   <a routerLink="/catalog">Каталог товаров</a>
-  <button id="basket-open-button" type="button" (click)="openCart()" class="cart-open-button">
+  <button id="basket-open-button" type="button" (click)="this.manageCartState(true)" class="cart-open-button">
     Корзина
     <img src="assets/cart-icon.png" class="cart-icon" alt="img">
   </button>

@@ -19,7 +19,7 @@ export class ProductDetailsGuard implements CanActivate {
     }).length > 0;
 
     if (!productExists) {
-      this.router.navigate(['/catalog']).then(() => {});
+      this.router.navigate(['/catalog']);
       return false;
     }
 

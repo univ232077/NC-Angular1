@@ -16,18 +16,18 @@ export class ProductsCatalogComponent implements OnInit {
   constructor(@Inject(PRODUCT_SERVICE) private productService: ProductService,
               private router: Router, private activatedRoute: ActivatedRoute) { }
 
-  onSearch(): void {
-    this.router.navigate(['/catalog'], {
-      queryParams: {
-        search: this.search
-      }
-    }).then(() => {});
-  }
-
   ngOnInit(): void {
     this.activatedRoute.queryParamMap.subscribe((params) => {
       const search = params.get('search') || '';
       this.productCards = this.productService.findProducts(search);
     })
+  }
+
+  onSearch(): void {
+    this.router.navigate(['/catalog'], {
+      queryParams: {
+        search: this.search
+      }
+    });
   }
 }

@@ -2,16 +2,16 @@
     <div class="cart-item-name">{{product?.name}}</div>
     <div class="cart-item-count-box">
         <button class="cart-item-count-button"
-                (click)="this.cartService.changeProductAmount(this.product, -1)">-</button>
+                (click)="this.decreaseAmount()">-</button>
         <div class="cart-item-count">{{product?.amount}}</div>
         <button class="cart-item-count-button"
-                (click)="this.cartService.changeProductAmount(this.product, 1)">+</button>
+                (click)="this.increaseAmount()">+</button>
     </div>
     <div class="cart-item-price">
-        {{(product?.amount ?? 1) * (product?.price ?? 1)}} RUB
+        {{(product?.amount ?? INVALID_PRODUCT_PRICE) * (product?.price ?? INVALID_PRODUCT_AMOUNT)}} RUB
     </div>
     <div>
-        <button (click)="this.cartService.removeProduct(product)">
+        <button (click)="this.removeProduct()">
             Удалить
         </button>
     </div>

@@ -9,6 +9,11 @@ import {CartService} from "../../services/cart.service";
   styleUrls: ['./product-card.component.css']
 })
 export class ProductCardComponent {
-  constructor(@Inject(CART_SERVICE) public cartService: CartService) { }
   @Input() productCard: ProductModel | undefined;
+
+  constructor(@Inject(CART_SERVICE) private cartService: CartService) { }
+
+  public addToCart() {
+    this.cartService.addProduct(this.productCard);
+  }
 }

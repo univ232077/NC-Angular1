@@ -6,14 +6,9 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title: string = 'nc-angular1';
-  public cartOpened: boolean = false;
+  cartOpened: boolean = false;
 
-  openCart(): void {
-    this.cartOpened = true;
-  }
-
-  closeCart(): void {
-    this.cartOpened = false;
+  public manageCartState(state: boolean) {
+    this.cartOpened = state;
   }
 }

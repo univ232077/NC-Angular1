@@ -6,8 +6,8 @@ import {ProductDetailsComponent} from "./components/product-details/product-deta
 import {ProductDetailsGuard} from "./guards/product-details.guard";
 
 const routes: Routes = [
-    { path: 'catalog', component: ProductsCatalogComponent },
     { path: 'product/:id', component: ProductDetailsComponent, canActivate: [ProductDetailsGuard] },
+    { path: 'catalog', component: ProductsCatalogComponent },
     { path: '', redirectTo: 'catalog', pathMatch: 'full' },
     { path: '**', component: PageNotFoundComponent},
 ];

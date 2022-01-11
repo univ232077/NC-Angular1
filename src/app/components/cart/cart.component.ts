@@ -4,17 +4,17 @@ import {CART_SERVICE} from "../../app.module";
 import {CartService} from "../../services/cart.service";
 
 @Component({
-  selector: 'app-cart',
-  templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.css']
+    selector: 'app-cart',
+    templateUrl: './cart.component.html',
+    styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  cartProducts: CartProductModel[] = [];
-  @Output() closeCart: EventEmitter<void> = new EventEmitter<void>();
+    @Output() closeCart: EventEmitter<void> = new EventEmitter<void>();
+    cartProducts: CartProductModel[] = [];
 
-  constructor(@Inject(CART_SERVICE) private cartService: CartService) { }
+    constructor(@Inject(CART_SERVICE) private cartService: CartService) { }
 
-  ngOnInit() {
-    this.cartProducts = this.cartService.getCartProducts();
-  }
+    ngOnInit() {
+        this.cartProducts = this.cartService.getCartProducts();
+    }
 }

@@ -10,5 +10,20 @@ import {CartService} from "../../services/cart.service";
 })
 export class CartProductComponent {
   @Input() product: CartProductModel | undefined;
-  constructor(@Inject(CART_SERVICE) public cartService: CartService) { }
+  readonly INVALID_PRODUCT_PRICE = -1;
+  readonly INVALID_PRODUCT_AMOUNT = 0;
+
+  constructor(@Inject(CART_SERVICE) private cartService: CartService) { }
+
+  public decreaseAmount() {
+    this.cartService.changeProductAmount(this.product, -1);
+  }
+
+  public increaseAmount() {
+    this.cartService.changeProductAmount(this.product, 1);
+  }
+
+  public removeProduct() {
+    this.cartService.removeProduct(this.product);
+  }
 }
